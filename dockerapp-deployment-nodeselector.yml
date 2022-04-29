@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerapp-nodeselector
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dockerapp
+  template:
+    metadata:
+      labels:
+        app: dockerapp
+    spec:
+      containers:
+        - name: docker-app
+          image: arpitb/docker-app
+          ports:
+            - name: nodejs-port
+              containerPort: 3000
+      nodeSelector:
+        hardware: high-spec
