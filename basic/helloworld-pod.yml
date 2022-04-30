@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: dockerapp-pod
+  name: helloworld-pod
   labels:
-    app: dockerapp
+    app: helloworld
 spec:
   containers:
     - name: docker-app

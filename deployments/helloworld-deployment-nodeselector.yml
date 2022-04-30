@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dockerapp-nodeselector
+  name: helloworld-nodeselector
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: dockerapp
+      app: helloworld
   template:
     metadata:
       labels:
-        app: dockerapp
+        app: helloworld
     spec:
       containers:
         - name: docker-app

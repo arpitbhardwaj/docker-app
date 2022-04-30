@@ -1,16 +1,16 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: lifecycle
+  name: helloworld-deployment-lifecycle
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lifecycle
+      app: helloworld
   template:
     metadata:
       labels:
-        app: lifecycle
+        app: helloworld
     spec:
       initContainers:
         - name:           init
